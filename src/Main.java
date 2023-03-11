@@ -4,7 +4,6 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Arrays;
 import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
         //zad1();
@@ -12,14 +11,14 @@ public class Main {
         zad3();
     }
     private static void zad3() {
-        getFromFileAndPrintBackwards("C:\\Users\\Kacper\\Documents\\java\\aisdlab02\\src\\data\\kochanowski.txt");
-        getFromFileAndPrintBackwards("C:\\Users\\Kacper\\Documents\\java\\aisdlab02\\src\\data\\morsztyn.txt");
+        getFromFileAndPrintBackwards("src/data/kochanowski.txt");
+        getFromFileAndPrintBackwards("src/data/morsztyn.txt");
 
     }
 
     private static void getFromFileAndPrintBackwards(String pathname) {
         File f = new File(pathname);
-        Scanner sc = null;
+        Scanner sc;
         TStack<String> st = new TStack<>();
         try {
             sc = new Scanner(f);
